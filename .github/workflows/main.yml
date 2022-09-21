@@ -16,5 +16,6 @@ jobs:
             echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "anniruddh09" --password-stdin
 
       - name: build and push the image
-        run: docker build -t anniruddh09/go-app:v1 .
-        run: docker push anniruddh09/go-app:v1
+        run: |
+             docker build -t anniruddh09/go-app:v1 .
+             docker push anniruddh09/go-app:v1
