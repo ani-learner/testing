@@ -17,6 +17,4 @@ jobs:
 
       - name: build and push the image
         run: docker build -t anniruddh09/go-app:v1 .
-        
-      - name: Docker Push
-        run: docker push anniruddh09/go-app:$v1
+        run: docker push anniruddh09/go-app:v1
