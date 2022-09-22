@@ -6,7 +6,7 @@ on:
 
 jobs:
     build:
-
+      if: github.event.pull.merged == true || ${{ github.event.head_commit.message }} == 'BUILD_CONTAINER_IMAGE'
       name: build
       runs-on: ubuntu-latest
       steps:
